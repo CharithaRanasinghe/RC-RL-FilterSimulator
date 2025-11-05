@@ -22,11 +22,11 @@ This project allows you to **visualize the time-domain response of RL and RC fil
 
 rl_rc_filter_simulator/
 │
-├── noise.csv # Sample noise data (optional)
-├── rl_rc_filter.py # Main interactive Python script
-├── generate_noise.py # Script to generate noise CSV
-├── requirements.txt # Python dependencies
-└── README.md # This file
+├── noise.csv 
+├── rl_rc_filter.py 
+├── generate_noise.py 
+├── requirements.txt 
+└── README.md 
 
 
 
@@ -55,15 +55,16 @@ Usage
 
 If you want to generate a new noise CSV file, run:
 
+```
 python generate_noise.py
-
+```
 
 This will create noise.csv with 5000 samples of white Gaussian noise (mean 0, standard deviation 1).
 You can also modify the generator to change the number of samples or noise characteristics.
 
+
 2. Run the Filter Simulation
 python rl_rc_filter.py
-
 
 This will open a window with five plots:
 
@@ -136,24 +137,6 @@ R: 10 Ω – 10 kΩ
 C: 1 nF – 1 mF
 
 L: 1 μH – 1 H
-
----
-
-
-
----
-
-This README is **fully comprehensive**:
-
-- Explains project features  
-- Installation instructions  
-- How to generate `noise.csv`  
-- Usage instructions for the interactive plot  
-- Slider explanation  
-- Filter formulas and cutoff frequency  
-- File structure  
-- Notes and tips  
-- License  
 
 ---
 
