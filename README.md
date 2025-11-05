@@ -36,7 +36,7 @@ rl_rc_filter_simulator/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/CharithaRanasinghe/rl_rc_filter_simulator.git
+git clone https://github.com/CharithaRanasinghe/RC-RL-FilterSimulator.git
 cd rl_rc_filter_simulator
 ```
 
