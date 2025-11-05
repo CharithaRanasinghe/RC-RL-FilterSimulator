@@ -155,9 +155,5 @@ This README is **fully comprehensive**:
 
 ---
 
-If you want, I can also **write a polished `LICENSE` file with MIT license text** so your GitHub repo is completely ready to publish.  
-
-Do you want me to do that?
-
 
 
