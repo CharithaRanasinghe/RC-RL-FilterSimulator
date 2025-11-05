@@ -15,6 +15,8 @@ This project allows you to **visualize the time-domain response of RL and RC fil
 - Fully self-contained Python script
 
 ---
+<img width="1916" height="1019" alt="image" src="https://github.com/user-attachments/assets/82f6d3a8-cd65-4c85-8a1f-3d8cc988d313" />
+---
 
 ## Folder Structure
 
