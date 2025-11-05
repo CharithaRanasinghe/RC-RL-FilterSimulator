@@ -21,16 +21,10 @@ This project allows you to **visualize the time-domain response of RL and RC fil
 ## Folder Structure
 
 rl_rc_filter_simulator/
-
-│
 ├── noise.csv 
-
 ├── rl_rc_filter.py 
-
 ├── generate_noise.py 
-
 ├── requirements.txt 
-
 └── README.md 
 
 
