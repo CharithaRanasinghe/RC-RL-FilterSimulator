@@ -89,53 +89,258 @@ Adjusting the sliders updates all filter plots in real-time, and the cutoff freq
 
 ---
 
-How It Works
+⚙️ How It Works
 
-Discrete-time approximation is used for the filters for fast simulation.
+Discrete-time approximation is used for the filters to enable fast simulation.
 
-RC filters:
+🧩 RC Filters
 
-Low-pass: y[n] = y[n-1] + α*(x[n] - y[n-1]), α = dt / (RC + dt)
+Low-pass:
 
-High-pass: y[n] = α*(y[n-1] + x[n] - x[n-1]), α = RC / (RC + dt)
+𝑦
+[
+𝑛
+]
+=
+𝑦
+[
+𝑛
+−
+1
+]
++
+𝛼
+(
+𝑥
+[
+𝑛
+]
+−
+𝑦
+[
+𝑛
+−
+1
+]
+)
+,
+𝛼
+=
+𝑑
+𝑡
+𝑅
+𝐶
++
+𝑑
+𝑡
+y[n]=y[n−1]+α(x[n]−y[n−1]),α=
+RC+dt
+dt
+	​
 
-RL filters:
 
-Low-pass: y[n] = y[n-1] + α*(x[n] - y[n-1]), α = dt / (L/R + dt)
+High-pass:
 
-High-pass: y[n] = (1 - α)*(y[n-1] + x[n] - x[n-1]), α = dt / (L/R + dt)
+𝑦
+[
+𝑛
+]
+=
+𝛼
+(
+𝑦
+[
+𝑛
+−
+1
+]
++
+𝑥
+[
+𝑛
+]
+−
+𝑥
+[
+𝑛
+−
+1
+]
+)
+,
+𝛼
+=
+𝑅
+𝐶
+𝑅
+𝐶
++
+𝑑
+𝑡
+y[n]=α(y[n−1]+x[n]−x[n−1]),α=
+RC+dt
+RC
+	​
 
-Cutoff frequencies:
+⚡ RL Filters
 
-RC: f_c = 1 / (2πRC)
+Low-pass:
 
-RL: f_c = R / (2πL)
+𝑦
+[
+𝑛
+]
+=
+𝑦
+[
+𝑛
+−
+1
+]
++
+𝛼
+(
+𝑥
+[
+𝑛
+]
+−
+𝑦
+[
+𝑛
+−
+1
+]
+)
+,
+𝛼
+=
+𝑑
+𝑡
+(
+𝐿
+/
+𝑅
+)
++
+𝑑
+𝑡
+y[n]=y[n−1]+α(x[n]−y[n−1]),α=
+(L/R)+dt
+dt
+	​
 
-File Descriptions
 
-rl_rc_filter.py – Main interactive Python script with sliders and plots
+High-pass:
 
-generate_noise.py – Generates noise.csv file with white Gaussian noise
+𝑦
+[
+𝑛
+]
+=
+(
+1
+−
+𝛼
+)
+(
+𝑦
+[
+𝑛
+−
+1
+]
++
+𝑥
+[
+𝑛
+]
+−
+𝑥
+[
+𝑛
+−
+1
+]
+)
+,
+𝛼
+=
+𝑑
+𝑡
+(
+𝐿
+/
+𝑅
+)
++
+𝑑
+𝑡
+y[n]=(1−α)(y[n−1]+x[n]−x[n−1]),α=
+(L/R)+dt
+dt
+	​
 
-noise.csv – Sample noise data (optional; auto-generated if missing)
+🎚️ Cutoff Frequencies
 
-requirements.txt – Python dependencies
+RC filter:
 
-README.md – Project instructions and usage guide
+𝑓
+𝑐
+=
+1
+2
+𝜋
+𝑅
+𝐶
+f
+c
+	​
 
-Notes
+=
+2πRC
+1
+	​
 
-Recommended Python 3.8+.
 
-Works in standard Python environments; does not require Jupyter Notebook.
+RL filter:
 
-Adjust slider ranges carefully for realistic filter behavior:
+𝑓
+𝑐
+=
+𝑅
+2
+𝜋
+𝐿
+f
+c
+	​
+
+=
+2πL
+R
+	​
+
+📁 File Descriptions
+File	Description
+rl_rc_filter.py	Main interactive Python script with sliders and plots
+generate_noise.py	Generates noise.csv file with white Gaussian noise
+noise.csv	Sample noise data (auto-generated if missing)
+requirements.txt	Python dependencies
+README.md	Project instructions and usage guide
+🧠 Notes
+
+Python 3.8+ recommended
+
+Works in standard Python environments (no Jupyter required)
+
+Adjust slider ranges for realistic filter behavior:
 
 R: 10 Ω – 10 kΩ
 
 C: 1 nF – 1 mF
 
-L: 1 μH – 1 H
+L: 1 µH – 1 H
 
 ---
 
